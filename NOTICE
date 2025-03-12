@@ -1,0 +1,11 @@
+# NOTICE
+
+This project includes modified code from:
+- improved-aesthetic-predictor (licensed under Apache 2.0)
+  Original repository: https://github.com/christophschuhmann/improved-aesthetic-predictor
+
+Modifications:
+- `src/aesthetic_predictor.py`:
+  - Removed dependency on PyTorch Lightning and adapted to standalone PyTorch.
+
+This modified code remains under the Apache License, Version 2.0.

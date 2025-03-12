@@ -22,20 +22,25 @@ build = [
     "tokenizers",
     "torch",
     "transformers[deepspeed]",
-    "xformers",
     "peft",
-    "trl",
     "huggingface_hub",
     "hf_transfer",
     "ipython>=8.32.0",
     "sentencepiece>=0.2.0",
     "protobuf>=5.29.3",
     "setuptools>=75.8.2",
+    "streamlit>=1.43.0",
+    "torchvision>=0.21.0",
+    "clip",
+    "aesthetic-predictor-v2-5>=2024.12.18.1",
 ]
 compile = ["flash-attn"]
 
 [dependency-groups]
 dev = ["huggingface-hub[cli]>=0.29.1", "ipykernel>=6.29.5", "kaggle>=1.6.17"]
+
+[tool.uv]
+no-build-isolation-package = ["flash-attn"]
 
 [[tool.uv.dependency-metadata]]
 name = "flash-attn"
@@ -44,6 +49,7 @@ requires-dist = ["torch", "einops"]
 
 [tool.uv.sources]
 torch = { index = "torch_cu124" }
+clip = { git = "https://github.com/openai/CLIP.git" }
 
 [[tool.uv.index]]
 name = "torch_cu124"

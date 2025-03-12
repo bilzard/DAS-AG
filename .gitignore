@@ -4,3 +4,4 @@ tmp/
 **/sandbox*
 **/wandb/
 !.gitkeep
+.env
